@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Największe wodospady</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f8; /* Jasny odcień niebiesko-zielony */
+        }
+        header {
+            background-color: #4CAF50; /* Zielony kolor nagłówka */
+            color: #fff; /* Biały tekst */
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #008CBA; /* Jasny niebieski kolor menu */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff; /* Biały tekst */
+            text-decoration: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #005F6B; /* Ciemniejszy odcień niebiesko-zielony */
+        }
+        #content {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #4CAF50; /* Zielony kolor stopki */
+            color: #fff; /* Biały tekst */
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .caption {
+            background-color: #008CBA; /* Jasny niebieski kolor opisu */
+            color: #fff; /* Biały tekst */
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Największe wodospady na świecie</h1>
+    </header>
+    <nav>
+        <a onclick="showWaterfall('niagara')">Wodospad Niagara</a>
+        <a onclick="showWaterfall('iguazu')">Wodospad Iguazú</a>
+        <a onclick="showWaterfall('victoria')">Wodospad Victoria</a>
+	<a href="index.html">Powrót do strony głównej</a>
+    </nav>
+    <div id="content">
+        <img src="turcja.jpg" id="waterfallImage" alt="wodospad">
+        <div class="caption" id="waterfallDescription">
+            Wybierz jeden z wodospadów z menu, aby zobaczyć zdjęcie i opis.
+        </div>
+	
+    <footer>
+        <p>&copy; 2024 Bartłomiej Gąsiorek</p>
+    </footer>
+
+    <script>
+        function showWaterfall(waterfall) {
+            var image = document.getElementById("waterfallImage");
+            var description = document.getElementById("waterfallDescription");
+
+            switch (waterfall) {
+                case 'niagara':
+                    image.src = "niagara2.jpg";
+                    description.innerHTML = "<h2>Wodospad Niagara</h2><p>Wodospad Niagara znajduje się na granicy między Stanami Zjednoczonymi (stan Nowy Jork) i Kanadą (prowincja Ontario). Jest to jedna z najbardziej rozpoznawalnych atrakcji turystycznych na świecie i składa się z trzech części: wodospadu kanadyjskiego, wodospadu amerykańskiego oraz mniejszego wodospadu Bridal Veil.</p>";
+                    break;
+                case 'iguazu':
+                    image.src = "iguazu2.jpg";
+                    description.innerHTML = "<h2>Wodospad Iguazú</h2><p>Wodospad Iguazú znajduje się na granicy między Brazylią i Argentyną. Składa się z około 275 oddzielnych wodospadów o różnej wysokości. Największym z nich jest 'Diablo', osiągający wysokość około 82 metrów.</p>";
+                    break;
+                case 'victoria':
+                    image.src = "victoria.jpg";
+                    description.innerHTML = "<h2>Wodospad Victoria</h2><p>Wodospad Victoria, znany również jako 'Mosi-oa-Tunya', znajduje się na granicy między Zambią i Zimbabwe w Afryce. Jest to jeden z największych wodospadów na świecie pod względem szerokości, osiągając ponad 1,7 kilometra szerokości i około 108 metrów wysokości.</p>";
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
